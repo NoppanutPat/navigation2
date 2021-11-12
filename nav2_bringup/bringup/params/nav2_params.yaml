@@ -7,7 +7,7 @@ amcl:
     alpha4: 0.2
     alpha5: 0.2
     base_frame_id: "base_link"
-    beam_skip_distance: 0.5
+    beam_skip_distance: 0.4
     beam_skip_error_threshold: 0.9
     beam_skip_threshold: 0.3
     do_beamskip: false
@@ -52,7 +52,7 @@ bt_navigator:
     use_sim_time: False
     global_frame: map
     robot_base_frame: base_link
-    odom_topic: /robot_base/odom
+    odom_topic: camera_odom_frame
     enable_groot_monitoring: True
     groot_zmq_publisher_port: 1666
     groot_zmq_server_port: 1667
@@ -238,7 +238,9 @@ global_costmap:
 map_server:
   ros__parameters:
     use_sim_time: False
-    yaml_filename: "/home/skuba_foxy/map.yaml"
+    yaml_filename: "/home/skuba/map.yaml"
+    topic_name: "map"
+    frame_id: "map"
 
 map_saver:
   ros__parameters:
