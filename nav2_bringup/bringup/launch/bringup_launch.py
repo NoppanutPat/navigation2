@@ -60,7 +60,7 @@ def generate_launch_description():
 
     declare_map_yaml_cmd = DeclareLaunchArgument(
         'map',
-        default_value='/home/skuba_foxy/map.yaml',
+        default_value='/home/skuba/map.yaml',
         description='Full path to map yaml file to load')
 
     declare_use_sim_time_cmd = DeclareLaunchArgument(
@@ -81,7 +81,7 @@ def generate_launch_description():
         description='Full path to the behavior tree xml file to use')
 
     declare_autostart_cmd = DeclareLaunchArgument(
-        'autostart', default_value='true',
+        'autostart', default_value='True',
         description='Automatically startup the nav2 stack')
 
     # Specify the actions
