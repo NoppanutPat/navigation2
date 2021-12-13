@@ -99,6 +99,7 @@ def generate_launch_description():
             executable='controller_server',
             output='screen',
             parameters=[configured_params],
+            respawn=True,
             remappings=remappings),
 
         Node(
@@ -106,6 +107,7 @@ def generate_launch_description():
             executable='planner_server',
             name='planner_server',
             output='screen',
+            respawn=True,
             parameters=[configured_params],
             remappings=remappings),
 
@@ -114,6 +116,7 @@ def generate_launch_description():
             executable='recoveries_server',
             name='recoveries_server',
             output='screen',
+            respawn=True,
             parameters=[configured_params],
             remappings=remappings),
 
@@ -122,6 +125,7 @@ def generate_launch_description():
             executable='bt_navigator',
             name='bt_navigator',
             output='screen',
+            respawn=True,
             parameters=[configured_params],
             remappings=remappings),
 
@@ -130,6 +134,7 @@ def generate_launch_description():
             executable='waypoint_follower',
             name='waypoint_follower',
             output='screen',
+            respawn=True,
             parameters=[configured_params],
             remappings=remappings),
 
@@ -138,6 +143,7 @@ def generate_launch_description():
             executable='lifecycle_manager',
             name='lifecycle_manager_navigation',
             output='screen',
+            respawn=True,
             parameters=[{'use_sim_time': use_sim_time},
                         {'autostart': autostart},
                         {'node_names': lifecycle_nodes}]),

@@ -15,12 +15,12 @@ amcl:
     lambda_short: 0.1
     laser_likelihood_max_dist: 2.0
     laser_max_range: 100.0
-    laser_min_range: 0.3
+    laser_min_range: 0.0
     laser_model_type: "likelihood_field"
     set_initial_pose: True
-    max_beams: 50
-    max_particles: 3500
-    min_particles: 1500
+    max_beams: 25
+    max_particles: 1000
+    min_particles: 500
     odom_frame_id: "camera_odom_frame"
     pf_err: 0.05
     pf_z: 0.99
@@ -33,7 +33,7 @@ amcl:
     tf_broadcast: true
     transform_tolerance: 1.0
     update_min_a: 0.05
-    update_min_d: 0.25
+    update_min_d: 0.15
     z_hit: 0.5
     z_max: 0.05
     z_rand: 0.5
@@ -115,11 +115,11 @@ controller_server:
       debug_trajectory_details: True
       min_vel_x: 0.0
       min_vel_y: 0.0
-      max_vel_x: 0.3
-      max_vel_y: 0.3
+      max_vel_x: 0.2
+      max_vel_y: 0.2
       max_vel_theta: 1.0
       min_speed_xy: 0.0
-      max_speed_xy: 0.3
+      max_speed_xy: 0.2
       min_speed_theta: 0.0
       # Add high threshold velocity for turtlebot 3 issue.
       # https://github.com/ROBOTIS-GIT/turtlebot3_simulations/issues/75
@@ -129,8 +129,8 @@ controller_server:
       # decel_lim_x: -2.0
       # decel_lim_y: -2.0
       # decel_lim_theta: -3.2
-      acc_lim_x: 0.5
-      acc_lim_y: 0.5
+      acc_lim_x: 0.3
+      acc_lim_y: 0.3
       acc_lim_theta: 3.2
       decel_lim_x: -0.5
       decel_lim_y: -0.5
@@ -142,7 +142,7 @@ controller_server:
       linear_granularity: 0.03
       angular_granularity: 0.025
       transform_tolerance: 0.20
-      xy_goal_tolerance: 0.10
+      xy_goal_tolerance: 0.20
       trans_stopped_velocity: 0.20
       short_circuit_trajectory_evaluation: True
       stateful: True
